@@ -7,10 +7,10 @@ public class Salad implements MenuItem {
         this.name=name;
         this.price=price;
     }
-    public static String getName(){
+    public String getName(){
         return name;
     }
-    public static double getPrice(){
+    public double getPrice(){
         return price;
     }
 }

@@ -10,22 +10,22 @@ public class Trio implements MenuItem{
         this.drink=drink;
     }
     public String getName(){
-        return Sandwich.getName()+"/"+Salad.getName()+"/"+Drink.getName();
+        return sandwich.getName() +"/"+salad.getName()+"/"+drink.getName();
     }
     public double getPrice(){
-        double s=Sandwich.getPrice()+Salad.getPrice()+Drink.getPrice();
+        double s=sandwich.getPrice()+salad.getPrice()+drink.getPrice();
         double l=0;
-        if(Sandwich.getPrice()<=Salad.getPrice()){
-            if(Sandwich.getPrice()<=Drink.getPrice()){
-                l=Sandwich.getPrice();
+        if(sandwich.getPrice()<=salad.getPrice()){
+            if(sandwich.getPrice()<=drink.getPrice()){
+                l=sandwich.getPrice();
             }else {
-                l=Drink.getPrice();
+                l=drink.getPrice();
             }
         }else {
-            if(Salad.getPrice()<=Drink.getPrice()){
-                l=Salad.getPrice();
+            if(salad.getPrice()<=drink.getPrice()){
+                l=salad.getPrice();
             }else {
-                l=Drink.getPrice();
+                l=drink.getPrice();
             }
         }
         return s-l;
